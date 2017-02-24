@@ -20,6 +20,14 @@ it('tickOnly should work', () => {
   expect(state.ok).toBe(true);
 });
 
+it('tickThenTimeout should work', () => {
+  const state = { ok: false };
+  timers.tickThenTimeout(state);
+  expect(state.ok).toBe(false);
+  jest.runAllTimers();
+  expect(state.ok).toBe(true);
+});
+
 it('timeoutThenTick should work?', () => {
   const state = { ok: false };
   timers.timeoutThenTick(state);

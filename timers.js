@@ -10,6 +10,14 @@ const tickOnly = (state) => {
   });
 };
 
+const tickThenTimeout = (state) => {
+  process.nextTick(() => {
+    setTimeout(() => {
+      state.ok = true;
+    });
+  });
+};
+
 const timeoutThenTick = (state) => {
   setTimeout(() => {
     process.nextTick(() => {
@@ -18,4 +26,4 @@ const timeoutThenTick = (state) => {
   }, 0);
 };
 
-module.exports = { timeoutOnly, tickOnly, timeoutThenTick };
+module.exports = { timeoutOnly, tickOnly, tickThenTimeout, timeoutThenTick };

@@ -8,12 +8,7 @@
   "dependencies": {
     "jest": "^19.0.2"
   },
-  "jest": {
-    "modulePathIgnorePatterns": [
-      "node_modules"
-    ]
-  },
   "scripts": {
-    "test": "jest"
+    "test": "jest timers.test.js"
   }
 }
