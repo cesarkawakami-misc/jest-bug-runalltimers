@@ -1,0 +1,19 @@
+{
+  "name": "jest-bug-runalltimers",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "https://github.com/cesarkawakami/jest-bug-runalltimers.git",
+  "author": "Cesar Kawakami <cesarkawakami@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "jest": "^19.0.2"
+  },
+  "jest": {
+    "modulePathIgnorePatterns": [
+      "node_modules"
+    ]
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}
